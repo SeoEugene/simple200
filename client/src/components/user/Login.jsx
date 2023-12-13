@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import firebase from '../../firebase';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,30 +11,20 @@ const Login = () => {
 
     const LoginFunc = async (e) => {
         e.preventDefault();
+
         if (!(email && password)) {
-            return alert("모든 값을 채워주세요");
+            return alert("모든 값을 채워주세요!")
         }
         try {
-            await firebase.auth().signInWithEmailAndPassword(email, password);
-            setErrorMsg("로그인 성공하였습니다.")
+            await firebase.auth().signInWithEmailAndPassword(email, password)
+            alert("로그인을 했습니다.")
             navigate("/")
-        } catch (err) {
-            console.log(err.code)
-            if (err.code === "auth/invalid-email") {
-                setErrorMsg("존재하지 않는 이메일 입니다.")
-            } else if (err.code === "auth/invalid-credential") {
-                setErrorMsg("비밀번호가 일치하지 않습니다.")
-            } else {
-                setErrorMsg("로그인 실패하였습니다.")
-            }
+        }
+        catch (err) {
+            console.log(err)
+            setErrorMsg("로그인을 실패했습니다.")
         }
     }
-
-    useEffect(() => {
-        setTimeout(() => {
-            setErrorMsg("");
-        }, 5000)
-    }, [errorMsg]);
 
     return (
         <div className="login__wrap">
@@ -65,6 +55,7 @@ const Login = () => {
                     />
                 </div>
                 <div>
+                    {/* 에러 메시지가 있을 때 나오도록 설정 */}
                     {errorMsg !== "" && <p>{errorMsg}</p>}
                 </div>
                 <div>

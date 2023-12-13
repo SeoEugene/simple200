@@ -115,6 +115,7 @@ const Join = () => {
                         />
                     </div>
                     <button
+                        // flag가 true 일때만 회원가입 가능
                         disabled={flag}
                         type="submit"
                         className="btn__style2 mt30"
