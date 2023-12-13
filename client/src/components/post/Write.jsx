@@ -7,6 +7,7 @@ const Write = () => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
     const [image, setImage] = useState("");
+
     let navigate = useNavigate();
 
     const onSubmit = (e) => {

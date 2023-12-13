@@ -48,6 +48,8 @@ const Detail = () => {
                 <div className='auth'>Joy</div>
             </div>
             <div className='detail__content'>
+                {/* local로 이미지 보기 */}
+                {/* {postInfo.image ? <img src={`http://localhost:5050/${postInfo.image}`} alt={postInfo.title} /> : null} */}
                 {postInfo.image ? <img src={`${postInfo.image}`} alt={postInfo.title} /> : null}
                 {postInfo.content}
             </div>
