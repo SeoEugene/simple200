@@ -1,0 +1,38 @@
+.detail__Wrap {
+    width: 800px;
+    margin: 20px auto;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid rgb(243, 240, 255);
+    background-color: rgb(247, 246, 255);
+
+    .detail__title {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgb(255, 231, 245);
+
+        h3 {
+            text-align: center;
+        }
+
+        .auth {}
+    }
+
+    .detail__content {
+        width: 100%;
+    }
+
+    .detail__btn {
+        display: flex;
+        justify-content: space-around;
+
+        button {
+
+            padding: 10px 30px;
+            background-color: var(--main);
+            color: #fdfdfd;
+            font-weight: 600;
+        }
+    }
+
+}

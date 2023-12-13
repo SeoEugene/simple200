@@ -1,0 +1,32 @@
+body {
+    background-color: var(--white);
+    // color: var(--white);
+}
+
+// 각 섹션 공통 요소
+section {
+    padding: 40px;
+
+    @media (max-width: 800px) {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        margin-left: 50px;
+    }
+}
+
+
+
+// 로딩 소스
+.isLoading {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.isLoaded {
+    opacity: 1;
+    transition: opacity 0.5s;
+}

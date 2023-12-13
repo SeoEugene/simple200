@@ -1,0 +1,40 @@
+:root {
+    --mainfont-yanolja: "Yanolja";
+    --mainfont-wooju: "wooJu";
+    --mainfont-murukmuruk: "murukmuruk";
+
+    --main: #fcba4c;
+    --gray: #dcdcdc;
+    --blue: #0071E3;
+    --black: #000000;
+    --black100: #222222;
+    --black200: #999999;
+    --black300: #bdbdbd;
+    --black400: #c4c4c4;
+    --black500: #f0f0f0;
+
+    --white: #fff;
+    --white100: #d6d6d6;
+    --white200: #fff;
+    --white300: #fff;
+    --white400: #fff;
+    --white500: #fff;
+
+    // 폰트 셋팅
+    font-family: var(--mainfont-yanolja), var(--mainfont-murukmuruk);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    // 폰트 최적화
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
